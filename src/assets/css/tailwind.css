@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+  }
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .topArrow {
+    @apply before:border-8 before:border-transparent before:border-b-indigo-300
+    before:w-4 before:h-4 before:absolute before:bottom-full before:left-28;
+  }
+  .link {
+    @apply px-2 py-1 m-1 border rounded block bg-indigo-600 hover:bg-indigo-500 cursor-pointer;
+  }
+  .myContainer {
+    @apply sm:max-w-[590px] md:max-w-[690px] 2md:max-w-[890px] lg:max-w-[970px] xl:max-w-[1160px] 2xl:max-w-[1380px] mx-auto;
+  }
+  .greenPill {
+    @apply after:w-2 after:h-2 after:bg-green-500 after:rounded-full after:absolute after:right-0 after:top-2/4 after:-translate-y-2/4;
+  }
+  .striped #room:nth-child(odd) {
+    @apply bg-violet-400/10;
+  }
+  .checkbox {
+    @apply w-full block text-center border border-indigo-400 p-2 rounded-md cursor-pointer peer-checked:bg-blue-500/50 peer-checked:border-2
+  }
+  #create-container h4 {
+    @apply text-white/50
+  }
+  #create-container label {
+    @apply text-violet-200
+  }
+  #create > div {
+    @apply mt-3
+  }
+  .input {
+    @apply outline-none bg-transparent rounded-md pl-3 py-1 text-sm placeholder:text-sm placeholder:font-light ring-1 ring-indigo-200/50 focus:ring-indigo-300
+  }
+  #user-info > div span {
+    @apply px-3 py-1 rounded-md my-1 ml-2 inline-block border border-white/25
+  }
+  #reset-pass > div label {
+    @apply text-white/70 block mb-2
+  }
+  #inputs > div label {
+    @apply text-white/70 block mb-2 font-light
+  }
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
